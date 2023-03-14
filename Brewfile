@@ -15,6 +15,8 @@ brew "awscli"
 brew "fnm"
 # GitHub command-line tool
 brew "gh"
+# Distributed revision control system
+brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Lightweight and flexible command-line JSON processor
@@ -23,8 +25,6 @@ brew "jq"
 brew "mysql-client"
 # 📦🚀 Fast, disk space efficient package manager
 brew "pnpm"
-# Tool to build, change, and version infrastructure
-brew "terraform", link: false
 # Terraform version manager inspired by rbenv
 brew "tfenv"
 # Terminal multiplexer
@@ -39,6 +39,12 @@ brew "lokalise/cli-2/lokalise2"
 brew "planetscale/tap/pscale"
 # Easily assume AWS roles in your terminal
 brew "remind101/formulae/assume-role"
+# Web browser
+cask "firefox"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# App to manage software development and track bugs
+cask "linear-linear"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Open-source code editor

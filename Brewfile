@@ -41,11 +41,17 @@ brew "planetscale/tap/pscale"
 brew "remind101/formulae/assume-role"
 # Web browser
 cask "firefox"
+# Git client focusing on productivity
+cask "gitkraken"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # App to manage software development and track bugs
 cask "linear-linear"
+# App to write, plan, collaborate, and get organized
+cask "notion"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Music streaming service
+cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"

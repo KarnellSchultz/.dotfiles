@@ -52,6 +52,9 @@ brew bundle --file ~/.dotfiles/Brewfile
 cd ~/.dotfiles && brew bundle
 ```
 
+## Font 
+
+- [Comic Mono](https://dtinth.github.io/comic-mono-font/)
 
 ## TODO List
 

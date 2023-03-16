@@ -39,6 +39,10 @@ brew "lokalise/cli-2/lokalise2"
 brew "planetscale/tap/pscale"
 # Easily assume AWS roles in your terminal
 brew "remind101/formulae/assume-role"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Chromium based browser
+cask "arc"
 # Web browser
 cask "firefox"
 # Git client focusing on productivity

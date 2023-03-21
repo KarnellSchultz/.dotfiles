@@ -8,9 +8,9 @@ Then, go **_way_** beyond 100 seconds by taking the full course on Udemy, [**_Do
 
 ## Update Brewfile
 
-    ```zsh
-    brew bundle dump --describe --force --file ~/.dotfiles/Brewfile
-    ```
+```zsh
+brew bundle dump --describe --force --file ~/.dotfiles/Brewfile
+```
     
 
 ## Steps to bootstrap a new Mac
@@ -52,6 +52,14 @@ brew bundle --file ~/.dotfiles/Brewfile
 
 # ...or move to the directory first.
 cd ~/.dotfiles && brew bundle
+```
+
+# Login to Github
+
+```zsh
+
+gh auth login
+
 ```
 
 ## Font

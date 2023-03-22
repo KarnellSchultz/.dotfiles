@@ -62,6 +62,13 @@ gh auth login
 
 ```
 
+# install oh-my-zsh
+
+```zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+```
+
 ## Font
 
 - [Comic Mono](https://dtinth.github.io/comic-mono-font/)

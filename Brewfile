@@ -13,6 +13,10 @@ brew "gh"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Open source relational database management system
+brew "mysql-client"
+# Platform built on V8 to build network applications
+brew "node"
 # 📦🚀 Fast, disk space efficient package manager
 brew "pnpm"
 # Terraform version manager inspired by rbenv
@@ -21,6 +25,8 @@ brew "tfenv"
 brew "tmux"
 # JavaScript package manager
 brew "yarn"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # The PlanetScale CLI
 brew "planetscale/tap/pscale"
 # Password manager that keeps all passwords secure behind one password
@@ -31,6 +37,8 @@ cask "arc"
 cask "firefox"
 # Git client focusing on productivity
 cask "gitkraken"
+# Web browser
+cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # App to manage software development and track bugs
@@ -43,3 +51,5 @@ cask "raycast"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
+cask "warp"

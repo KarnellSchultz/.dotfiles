@@ -70,9 +70,12 @@ ZSH_THEME="simple"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
+plugins=(
+    git
+    z
     zsh-autosuggestions 
-    zsh-syntax-highlighting)
+    zsh-syntax-highlighting
+    )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,3 +118,4 @@ export KUBECONFIG=~/.kube/config.dev:~/.kube/config.prod # https://www.notion.so
 alias nvm="fnm"
 alias pn=pnpm
 alias y=yarn
+

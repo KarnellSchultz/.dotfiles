@@ -1,3 +1,4 @@
+tap "1password/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -31,8 +32,12 @@ brew "zsh-syntax-highlighting"
 brew "planetscale/tap/pscale"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
 # Chromium based browser
 cask "arc"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
 # Git client focusing on productivity

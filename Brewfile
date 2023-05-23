@@ -50,8 +50,12 @@ cask "iterm2"
 cask "linear-linear"
 # App to write, plan, collaborate, and get organized
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Instant messaging application focusing on security
+cask "signal"
 # Music streaming service
 cask "spotify"
 # Open-source code editor

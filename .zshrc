@@ -73,8 +73,9 @@ ZSH_THEME="simple"
 plugins=(
     git
     z
-    zsh-autosuggestions 
+    zsh-autosuggestions
     zsh-syntax-highlighting
+    aws
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,12 +101,12 @@ source $ZSH/oh-my-zsh.sh
 # fnm stuff below
 eval "$(fnm env --use-on-cd)"
 
-# hedvig stuff below
-export PATH="$PATH:/Users/karnellschultz/.yarn/bin"
-export NVM_DIR="$HOME/.nvm"
-export KUBECONFIG=~/.kube/config.dev:~/.kube/config.prod # https://www.notion.so/hedviginsurance/How-to-access-Kubernetes-16d19f0df33c40f6a51ff966570a0d95
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# XXL stuff below
 
+# Start ssh-agent
+eval $(ssh-agent) >/dev/null
+
+# XXL stuff above
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -118,4 +119,3 @@ export KUBECONFIG=~/.kube/config.dev:~/.kube/config.prod # https://www.notion.so
 alias nvm="fnm"
 alias pn=pnpm
 alias y=yarn
-

@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="simple"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,6 +113,8 @@ eval "$(fnm env --use-on-cd)"
 # Start ssh-agent
 eval $(ssh-agent) >/dev/null
 
+export XXL_FES_PATH="/Users/karnellschultz/xxl/xxl-frontend-service"
+
 # XXL stuff above
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -119,3 +128,43 @@ eval $(ssh-agent) >/dev/null
 alias nvm="fnm"
 alias pn=pnpm
 alias y=yarn
+alias awsume="source awsume"
+alias cd=z
+alias lg="lazygit"
+
+export ASSUMED_ROLE="xxldev"
+
+export JAVA_HOME="/opt/homebrew/opt/openjdk@11"
+export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+
+# Created by `pipx` on 2023-06-07 14:21:01
+export PATH="$PATH:/Users/karnellschultz/.local/bin"
+
+# bun completions
+[ -s "/Users/karnellschultz/.bun/_bun" ] && source "/Users/karnellschultz/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/karnellschultz/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+PATH=~/.console-ninja/.bin:$PATH
+
+eval "$(zoxide init zsh)"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -128,9 +128,11 @@ export XXL_FES_PATH="/Users/karnellschultz/xxl/xxl-frontend-service"
 alias nvm="fnm"
 alias pn=pnpm
 alias y=yarn
-alias awsume="source awsume"
+alias awsume=". awsume"
 alias cd=z
 alias lg="lazygit"
+
+export EDITOR="zed --wait"
 
 export ASSUMED_ROLE="xxldev"
 
@@ -160,11 +162,20 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-PATH=~/.console-ninja/.bin:$PATH
+
+
 
 eval "$(zoxide init zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# use fnm to set the default node version to 20 and quiet the output
+ nvm default 21 >/dev/null 2>&1
+
+# fnm
+export PATH="/Users/karnellschultz/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"

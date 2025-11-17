@@ -1,3 +1,4 @@
+
 # https://www.youtube.com/watch?v=ud7YxC33Z3w&t=529s
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -12,35 +13,40 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # XXL
 export XXL_FES_PATH="/Users/karnellschultz/xxl/xxl-frontend-service"
-export EDITOR="zed --wait"
 export ASSUMED_ROLE="xxldev"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@11"
 export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+
 # personal
 export PATH="$PATH:/Users/karnellschultz/.local/bin"
+export EDITOR="nvim"
+
 # bun completions
 [ -s "/Users/karnellschultz/.bun/_bun" ] && source "/Users/karnellschultz/.bun/_bun"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Go
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
 # pnpm
 export PNPM_HOME="/Users/karnellschultz/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
 # use fnm to set the default node version to 20 and quiet the output
  nvm default 21 >/dev/null 2>&1
 # fnm
 export PATH="/Users/karnellschultz/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 
-# Source/Load zinit
+# Source/Load zinit https://github.com/zdharma-continuum/zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in zsh plugins
@@ -68,9 +74,12 @@ alias awsume=". awsume"
 alias cd=z
 alias lg="lazygit"
 alias vim="nvim"
-alias ls='ls --color'
+alias v='nvim'
+alias ls='eza -l'
+alias ll='ls -la --color'
 alias vim='nvim'
 alias c='clear'
+alias fzf='f'
 
 #Keybindings
 bindkey '^p' history-search-backward
@@ -103,11 +112,10 @@ eval "$(zoxide init zsh)"
 eval "$(fnm env --use-on-cd)"
 
 # XXL stuff below
-
 # Start ssh-agent
 eval $(ssh-agent) >/dev/null
-
-
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 fi
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

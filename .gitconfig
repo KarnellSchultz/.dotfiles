@@ -1,24 +1,7 @@
 [user]
-	email = 50870173+KarnellSchultz@users.noreply.github.com
-	name = Karnell Schultz
-[core]
-	excludesfile = /Users/karnellschultz/.gitignore_global
-	editor = code --wait
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[commit]
-	template = /Users/karnellschultz/.stCommitMsg
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[pull]
-	rebase = true
-[alias]
-	lol = log --oneline
-	lolg = log --oneline --graph
+	email = KarnellSchultz@gmail.com
+	name = karnell schultz
+[includeIf "gitdir:~/xxl/"]
+	path = ~/.gitconfig-xxl
+[init]
+	defaultBranch = master
